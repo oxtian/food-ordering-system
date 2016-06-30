@@ -16,20 +16,14 @@ puts "\tMy Restaurant"
 puts "(1)\tFried Chicken\t$5\n(2)\tFried Meehoon\t$10\n(3)\tChar Keoy Teow\t$5\nPlease key in the number to select your food."
 food_choice = gets.chomp
 
-if food_choice == "1"
-	puts "You have chosen Fried Chicken. The total price is $5.35."
-elsif food_choice == "2"
-	puts "You have chosen Fried Meehoon. The total price is $10.70."
-elsif food_choice == "3" 
-	puts "You have chosen Char Keoy Teow. The total price is $5.35."
-else 
-	puts "Sorry! No such choice!"
-end
+choice_output_map = {"1"=>"You have chosen Fried Chicken. The total price is $5.35.",
+    "2"=>"You have chosen Fried Meehoon. The total price is $10.70.",
+    "3"=>"You have chosen Char Keoy Teow. The total price is $5.35."}
+
+puts choice_output_map.fetch food_choice,  "Sorry! No such choice!"
 
 
-			
 
-=======
 
 puts "What is your first name?"
 first_name = gets.chomp
